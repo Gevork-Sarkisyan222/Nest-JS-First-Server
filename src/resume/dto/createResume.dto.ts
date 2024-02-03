@@ -28,7 +28,7 @@ export class CreateResumeDto {
   @IsString()
   salary: string;
 
-  // connection
+  // connection with media
   @IsOptional()
   @IsEmail()
   email?: string;
