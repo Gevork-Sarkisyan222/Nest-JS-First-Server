@@ -3,6 +3,7 @@ import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { CreateResumeDto } from './dto/createResume.dto';
 import { Resume } from 'src/schemas/Resume.schema';
+import { EditResumeDto } from './dto/editResume.dto';
 
 @Injectable()
 export class ResumeService {
@@ -18,7 +19,7 @@ export class ResumeService {
     return 'Resume has been deleted';
   }
 
-  async editResume(id: string, resumeDto) {
+  async editResume(id: string, resumeDto: EditResumeDto) {
     await this.resumeModel.findByIdAndUpdate(id, resumeDto);
     return 'Resume edited successfully';
   }

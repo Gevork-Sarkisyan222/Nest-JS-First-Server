@@ -1,4 +1,4 @@
-import { IsEmail, IsNotEmpty, IsOptional, IsString, Max } from 'class-validator';
+import { IsEmail, IsOptional, IsString, Max } from 'class-validator';
 
 export class EditResumeDto {
   @IsString()
